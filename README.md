@@ -14,3 +14,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/scottishcoder.svg?style=social&label=Follow%20%40scottishcoder)](https://twitter.com/scottishcoder)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/owainwilliams/)
+[![Blog](https://img.shields.io/badge/Owain.-Codes-green)](https://owain.codes)
