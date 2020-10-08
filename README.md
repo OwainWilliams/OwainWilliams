@@ -15,7 +15,12 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-### Get in touch
+- 🔭 I’m currently working on relaunching my blog
+- 🌱 I’m currently trying to get my head around Dependency Injection!
+- 👯 I’m looking to collaborate on anything! Give me a shout! 
+
+
+### 📫 Get in touch
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/scottishcoder.svg?style=social&label=Follow%20%40scottishcoder)](https://twitter.com/scottishcoder)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/owainwilliams/)
 [![Blog](https://img.shields.io/badge/Owain.-Codes-green)](https://owain.codes)
