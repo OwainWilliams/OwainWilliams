@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-- 🔭 I’m currently working on relaunching my blog
+- 🔭 I’m currently working on this and that.
 - 🌱 I’m currently trying to get my head around Dependency Injection!
 - 👯 I’m looking to collaborate on anything! Give me a shout! 
 
