@@ -47,4 +47,4 @@ Here are some ideas to get you started:
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OwainWilliams&theme=transparent" />
 </picture>
   
-[![@nikrimington's Holopin board](https://holopin.me/scottishcoder)](https://holopin.io/@scottishcoder)
+[![@scottishcoder's Holopin board](https://holopin.me/scottishcoder)](https://holopin.io/@scottishcoder)
