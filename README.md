@@ -48,3 +48,6 @@ Here are some ideas to get you started:
 </picture>
   
 [![@scottishcoder's Holopin board](https://holopin.me/scottishcoder)](https://holopin.io/@scottishcoder)
+
+
+<a href="https://www.last.fm/user/YOURUSERNAME"><img src="https://lastfm-recently-played.vercel.app/api?user=owaincodes" height="auto" width="350px"/></a>
