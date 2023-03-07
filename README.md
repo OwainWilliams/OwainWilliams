@@ -25,6 +25,12 @@ Here are some ideas to get you started:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/owainwilliams/)
 [![Blog](https://img.shields.io/badge/Owain.-Codes-green)](https://owain.codes)
 
+### Recently listened to
+
+<a href="https://www.last.fm/user/owaincodes"><img src="https://lastfm-recently-played.vercel.app/api?user=owaincodes" height="auto" width="350px"/></a>
+
+
+### Stats
 
 <picture>
 <source 
@@ -46,11 +52,9 @@ Here are some ideas to get you started:
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=OwainWilliams&theme=transparent" />
 </picture>
-  
+
+### Holopins
+
 [![@scottishcoder's Holopin board](https://holopin.me/scottishcoder)](https://holopin.io/@scottishcoder)
 
 
-<h2>Last.Fm Scobbles</h2>
-Want to know what I listen to while coding?
-<br />
-<a href="https://www.last.fm/user/owaincodes"><img src="https://lastfm-recently-played.vercel.app/api?user=owaincodes" height="auto" width="350px"/></a>
