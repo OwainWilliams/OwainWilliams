@@ -52,4 +52,5 @@ Here are some ideas to get you started:
 
 <h2>Last.Fm Scobbles</h2>
 Want to know what I listen to while coding?
+<br />
 <a href="https://www.last.fm/user/owaincodes"><img src="https://lastfm-recently-played.vercel.app/api?user=owaincodes" height="auto" width="350px"/></a>
