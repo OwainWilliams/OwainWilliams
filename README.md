@@ -1,4 +1,4 @@
-### Owain Williams AKA ScottishCoder.
+### Owain Williams AKA OwainCodes.
 
 <!--
 **OwainWilliams/OwainWilliams** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-- 🔭 I’m currently working on this and that.
+- 🔭 I’m currently working on this and that - lots of project have begun but maybe not completed!
 - 👯 I’m looking to collaborate on anything! Give me a shout! 
 
 
