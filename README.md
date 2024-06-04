@@ -62,4 +62,8 @@ Here are some ideas to get you started:
 
 [![@scottishcoder's Holopin board](https://holopin.me/scottishcoder)](https://holopin.io/@scottishcoder)
 
+### Daily.Dev
+
+<a href="https://app.daily.dev/owaincodes"><img src="https://api.daily.dev/devcards/v2/-t_WQefZK.png?r=gb7&type=default" width="356" alt="Owain Williams's Dev Card"/></a>
+
 
