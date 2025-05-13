@@ -20,15 +20,10 @@ Here are some ideas to get you started:
 
 
 ### 📫 Get in touch
-[![Mastodon](https://img.shields.io/badge/Mastodon-red)](https://umbracocommunity.social/@owaincodes)
-[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/owaincodes.svg?style=social&label=Follow%20%40owaincodes)](https://twitter.com/owaincodes)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue)](https://www.linkedin.com/in/owainwilliams/)
-[![Blog](https://img.shields.io/badge/Owain.-Codes-green)](https://owain.codes)
-
-
-☕ [buy me a coffee](https://www.buymeacoffee.com/owaincodes)
-
-
+[![Mastodon](https://img.shields.io/badge/Mastodon-red?style=for-the-badge)](https://umbracocommunity.social/@owaincodes)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=for-the-badge)](https://www.linkedin.com/in/owainwilliams/)
+[![Blog](https://img.shields.io/badge/Owain.-Codes-green?style=for-the-badge)](https://owain.codes)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy_Me_a_Coffee-blue?style=for-the-badge&logo=buymeacoffee&logoColor=white)](https://www.buymeacoffee.com/owaincodes)
 
 ### Recently listened to
 
