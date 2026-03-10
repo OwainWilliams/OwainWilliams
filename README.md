@@ -32,11 +32,11 @@ Here are some ideas to get you started:
 ## 📝 Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Auto-Updating Your GitHub README with Your Latest Blog Posts](https://owain.codes/blog/2026/march/auto-updating-your-github-readme-with-your-latest-blog-posts/) — Mar 10, 2026
 - [How I used Umbraco.AI for free](https://owain.codes/blog/2026/february/how-i-used-umbracoai-for-free/) — Feb 27, 2026
 - [Tracking Bouldering Sessions with a Garmin Watch App and Umbraco Dashboard](https://owain.codes/blog/2026/february/tracking-bouldering-sessions-with-a-garmin-watch-app-and-umbraco-dashboard/) — Feb 20, 2026
 - [Upgrading Umbraco 13 to Umbraco 17 issue](https://owain.codes/blog/2026/february/upgrading-umbraco-13-to-umbraco-17-issue/) — Feb 04, 2026
 - [When GitKraken Desktop Runs Slow](https://owain.codes/blog/2025/december/when-gitkraken-desktop-runs-slow/) — Dec 17, 2025
-- [OC.HiddenDashboard - Umbraco Package](https://owain.codes/blog/2025/december/ochiddendashboard-umbraco-package/) — Dec 15, 2025
 <!-- BLOG-POST-LIST:END -->
 
 ### Stats
