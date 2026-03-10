@@ -47,6 +47,14 @@ Here are some ideas to get you started:
 ## 📦Nuget Packages
 
 <!-- NUGET-LIST:START -->
+| Package | Version | Downloads |
+|---------|---------|-----------|
+| [Umbraco.Community.MediaColourFinder](https://www.nuget.org/packages/Umbraco.Community.MediaColourFinder) | ![NuGet](https://img.shields.io/nuget/v/Umbraco.Community.MediaColourFinder) | ![Downloads](https://img.shields.io/nuget/dt/Umbraco.Community.MediaColourFinder) |
+| [oc.MultipleDatePicker](https://www.nuget.org/packages/oc.MultipleDatePicker) | ![NuGet](https://img.shields.io/nuget/v/oc.MultipleDatePicker) | ![Downloads](https://img.shields.io/nuget/dt/oc.MultipleDatePicker) |
+| [OC.HiddenDashboard](https://www.nuget.org/packages/OC.HiddenDashboard) | ![NuGet](https://img.shields.io/nuget/v/OC.HiddenDashboard) | ![Downloads](https://img.shields.io/nuget/dt/OC.HiddenDashboard) |
+| [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
+| [OC.MultiHotspot](https://www.nuget.org/packages/OC.MultiHotspot) | ![NuGet](https://img.shields.io/nuget/v/OC.MultiHotspot) | ![Downloads](https://img.shields.io/nuget/dt/OC.MultiHotspot) |
+| [OC.MediaColourFinderV2](https://www.nuget.org/packages/OC.MediaColourFinderV2) | ![NuGet](https://img.shields.io/nuget/v/OC.MediaColourFinderV2) | ![Downloads](https://img.shields.io/nuget/dt/OC.MediaColourFinderV2) |
 <!-- NUGET-LIST:END -->
 
 ### Stats
