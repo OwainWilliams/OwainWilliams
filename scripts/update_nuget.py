@@ -43,19 +43,4 @@ def update_readme(packages):
 if __name__ == "__main__":
     packages = fetch_nuget_packages()
     update_readme(packages)
-```
 
-Also **revert `update_readme.py`** back to only handling blog posts — remove the NuGet functions you added in the previous step, so each script has a single responsibility.
-
----
-
-Your repo structure should now look like this:
-```
-.github/
-  workflows/
-    blog-posts.yml       ← runs at 6am UTC
-    nuget-packages.yml   ← runs at 7am UTC
-scripts/
-  update_readme.py       ← blog posts only
-  update_nuget.py        ← nuget packages only
-README.md
