@@ -44,6 +44,11 @@ Here are some ideas to get you started:
 - [When GitKraken Desktop Runs Slow](https://owain.codes/blog/2025/december/when-gitkraken-desktop-runs-slow/) — Dec 17, 2025
 <!-- BLOG-POST-LIST:END -->
 
+## 📦Nuget Packages
+
+<!-- NUGET-LIST:START -->
+<!-- NUGET-LIST:END -->
+
 ### Stats
 
 <picture>
