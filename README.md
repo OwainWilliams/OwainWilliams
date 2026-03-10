@@ -68,8 +68,8 @@ $ ps aux | grep owain
 
 **Badges of Honour 🏆**
 
-![Umbraco MVP](https://img.shields.io/badge/Umbraco-MVP-3544B1?style=flat-square&logo=umbraco&logoColor=white)
-![GitKraken](https://img.shields.io/badge/GitKraken-Ambassador-179287?style=flat-square&logo=gitkraken&logoColor=white)
+[![Umbraco MVP](https://img.shields.io/badge/Umbraco-MVP-3544B1?style=flat-square&logo=umbraco&logoColor=white)](https://community.umbraco.com/mvp-program/current-mvps/)
+[![GitKraken](https://img.shields.io/badge/GitKraken-Ambassador-179287?style=flat-square&logo=gitkraken&logoColor=white)](https://gitkraken.cello.so/vVycZPQEC15)
 
 
 **Languages & Frameworks**
