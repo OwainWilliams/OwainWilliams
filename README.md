@@ -110,14 +110,14 @@ $ ps aux | grep owain
 ## `> nuget publish --list`
 
 <!-- NUGET-LIST:START -->
-| `package` | `version` | `downloads` |
-|-----------|-----------|-------------|
-| [Umbraco.Community.MediaColourFinder](https://www.nuget.org/packages/Umbraco.Community.MediaColourFinder) | ![NuGet](https://img.shields.io/nuget/v/Umbraco.Community.MediaColourFinder?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/Umbraco.Community.MediaColourFinder?style=flat-square&color=00d084) |
-| [oc.MultipleDatePicker](https://www.nuget.org/packages/oc.MultipleDatePicker) | ![NuGet](https://img.shields.io/nuget/v/oc.MultipleDatePicker?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/oc.MultipleDatePicker?style=flat-square&color=00d084) |
-| [OC.HiddenDashboard](https://www.nuget.org/packages/OC.HiddenDashboard) | ![NuGet](https://img.shields.io/nuget/v/OC.HiddenDashboard?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/OC.HiddenDashboard?style=flat-square&color=00d084) |
-| [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis?style=flat-square&color=00d084) |
-| [OC.MultiHotspot](https://www.nuget.org/packages/OC.MultiHotspot) | ![NuGet](https://img.shields.io/nuget/v/OC.MultiHotspot?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/OC.MultiHotspot?style=flat-square&color=00d084) |
-| [OC.MediaColourFinderV2](https://www.nuget.org/packages/OC.MediaColourFinderV2) | ![NuGet](https://img.shields.io/nuget/v/OC.MediaColourFinderV2?style=flat-square&color=004880) | ![Downloads](https://img.shields.io/nuget/dt/OC.MediaColourFinderV2?style=flat-square&color=00d084) |
+| Package | Version | Downloads |
+|---------|---------|-----------|
+| [Umbraco.Community.MediaColourFinder](https://www.nuget.org/packages/Umbraco.Community.MediaColourFinder) | ![NuGet](https://img.shields.io/nuget/v/Umbraco.Community.MediaColourFinder) | ![Downloads](https://img.shields.io/nuget/dt/Umbraco.Community.MediaColourFinder) |
+| [oc.MultipleDatePicker](https://www.nuget.org/packages/oc.MultipleDatePicker) | ![NuGet](https://img.shields.io/nuget/v/oc.MultipleDatePicker) | ![Downloads](https://img.shields.io/nuget/dt/oc.MultipleDatePicker) |
+| [OC.HiddenDashboard](https://www.nuget.org/packages/OC.HiddenDashboard) | ![NuGet](https://img.shields.io/nuget/v/OC.HiddenDashboard) | ![Downloads](https://img.shields.io/nuget/dt/OC.HiddenDashboard) |
+| [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
+| [OC.MultiHotspot](https://www.nuget.org/packages/OC.MultiHotspot) | ![NuGet](https://img.shields.io/nuget/v/OC.MultiHotspot) | ![Downloads](https://img.shields.io/nuget/dt/OC.MultiHotspot) |
+| [OC.MediaColourFinderV2](https://www.nuget.org/packages/OC.MediaColourFinderV2) | ![NuGet](https://img.shields.io/nuget/v/OC.MediaColourFinderV2) | ![Downloads](https://img.shields.io/nuget/dt/OC.MediaColourFinderV2) |
 <!-- NUGET-LIST:END -->
 
 ---
