@@ -118,6 +118,7 @@ $ ps aux | grep owain
 | [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
 | [OC.MultiHotspot](https://www.nuget.org/packages/OC.MultiHotspot) | ![NuGet](https://img.shields.io/nuget/v/OC.MultiHotspot) | ![Downloads](https://img.shields.io/nuget/dt/OC.MultiHotspot) |
 | [OC.MediaColourFinderV2](https://www.nuget.org/packages/OC.MediaColourFinderV2) | ![NuGet](https://img.shields.io/nuget/v/OC.MediaColourFinderV2) | ![Downloads](https://img.shields.io/nuget/dt/OC.MediaColourFinderV2) |
+| [OC.UFMMemberLookup](https://www.nuget.org/packages/OC.UFMMemberLookup) | ![NuGet](https://img.shields.io/nuget/v/OC.UFMMemberLookup) | ![Downloads](https://img.shields.io/nuget/dt/OC.UFMMemberLookup) |
 <!-- NUGET-LIST:END -->
 
 ---
