@@ -115,9 +115,9 @@ $ ps aux | grep owain
 | [Umbraco.Community.MediaColourFinder](https://www.nuget.org/packages/Umbraco.Community.MediaColourFinder) | ![NuGet](https://img.shields.io/nuget/v/Umbraco.Community.MediaColourFinder) | ![Downloads](https://img.shields.io/nuget/dt/Umbraco.Community.MediaColourFinder) |
 | [oc.MultipleDatePicker](https://www.nuget.org/packages/oc.MultipleDatePicker) | ![NuGet](https://img.shields.io/nuget/v/oc.MultipleDatePicker) | ![Downloads](https://img.shields.io/nuget/dt/oc.MultipleDatePicker) |
 | [OC.HiddenDashboard](https://www.nuget.org/packages/OC.HiddenDashboard) | ![NuGet](https://img.shields.io/nuget/v/OC.HiddenDashboard) | ![Downloads](https://img.shields.io/nuget/dt/OC.HiddenDashboard) |
+| [OC.PowerSort](https://www.nuget.org/packages/OC.PowerSort) | ![NuGet](https://img.shields.io/nuget/v/OC.PowerSort) | ![Downloads](https://img.shields.io/nuget/dt/OC.PowerSort) |
 | [OC.MultiHotspot](https://www.nuget.org/packages/OC.MultiHotspot) | ![NuGet](https://img.shields.io/nuget/v/OC.MultiHotspot) | ![Downloads](https://img.shields.io/nuget/dt/OC.MultiHotspot) |
 | [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
-| [OC.PowerSort](https://www.nuget.org/packages/OC.PowerSort) | ![NuGet](https://img.shields.io/nuget/v/OC.PowerSort) | ![Downloads](https://img.shields.io/nuget/dt/OC.PowerSort) |
 | [OC.UFMMemberLookup](https://www.nuget.org/packages/OC.UFMMemberLookup) | ![NuGet](https://img.shields.io/nuget/v/OC.UFMMemberLookup) | ![Downloads](https://img.shields.io/nuget/dt/OC.UFMMemberLookup) |
 | [OC.MediaColourFinderV2](https://www.nuget.org/packages/OC.MediaColourFinderV2) | ![NuGet](https://img.shields.io/nuget/v/OC.MediaColourFinderV2) | ![Downloads](https://img.shields.io/nuget/dt/OC.MediaColourFinderV2) |
 | [OC.UFMFallbacks](https://www.nuget.org/packages/OC.UFMFallbacks) | ![NuGet](https://img.shields.io/nuget/v/OC.UFMFallbacks) | ![Downloads](https://img.shields.io/nuget/dt/OC.UFMFallbacks) |
