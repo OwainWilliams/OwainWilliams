@@ -96,11 +96,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [GitKraken CLI Beginner's Guide: A Better Git CLI for Developers](https://owain.codes/blog/2026/march/gitkraken-cli-beginners-guide/) — Mar 24, 2026
 - [OC.PowerSort Package](https://owain.codes/blog/2026/march/ocpowersort-package/) — Mar 18, 2026
 - [OC.UFMFallbacks Package](https://owain.codes/blog/2026/march/ocufmfallbacks-package/) — Mar 17, 2026
 - [OC.UFMMemberLookup Package](https://owain.codes/blog/2026/march/ocufmmemberlookup-package/) — Mar 16, 2026
 - [Auto-Updating Your GitHub README with Your Latest Blog Posts](https://owain.codes/blog/2026/march/auto-updating-your-github-readme-with-your-latest-blog-posts/) — Mar 10, 2026
-- [How I used Umbraco.AI for free](https://owain.codes/blog/2026/february/how-i-used-umbracoai-for-free/) — Feb 27, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
