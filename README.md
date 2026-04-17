@@ -1,20 +1,5 @@
 <div align="center">
 
-```
-   ____                _         _____          _           
-  / __ \              (_)       / ____|        | |          
- | |  | |_      ____ _ _ _ __  | |     ___   __| | ___  ___ 
- | |  | \ \ /\ / / _` | | '_ \ | |    / _ \ / _` |/ _ \/ __|
- | |__| |\ V  V / (_| | | | | || |___| (_) | (_| |  __/\__ \
-  \____/  \_/\_/ \__,_|_|_| |_(_)_____\___/ \__,_|\___||___/
-                                                            
-                                                            
-```
-
-</div>
-
-<div align="center">
-
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&pause=1000&color=00FF9C&center=true&vCenter=true&width=500&lines=Senior+.Net+Developer+%F0%9F%9A%80;Umbraco+Community+Contributor+%F0%9F%8F%86;OSS+Package+Creator+%F0%9F%93%A6;Always+building+something+new...+%F0%9F%94%A7)
 
 </div>
