@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [OC.PowerSort 1.2.0](https://owain.codes/blog/2026/april/ocpowersort-120/) — Apr 17, 2026
 - [Optimizing Umbraco Member Pagination From Slow to Lightning Fast](https://owain.codes/blog/2026/march/optimizing-umbraco-member-pagination-from-slow-to-lightning-fast/) — Mar 31, 2026
 - [GitKraken CLI Beginner's Guide: A Better Git CLI for Developers](https://owain.codes/blog/2026/march/gitkraken-cli-beginners-guide/) — Mar 24, 2026
 - [OC.PowerSort Package](https://owain.codes/blog/2026/march/ocpowersort-package/) — Mar 18, 2026
 - [OC.UFMFallbacks Package](https://owain.codes/blog/2026/march/ocufmfallbacks-package/) — Mar 17, 2026
-- [OC.UFMMemberLookup Package](https://owain.codes/blog/2026/march/ocufmmemberlookup-package/) — Mar 16, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
