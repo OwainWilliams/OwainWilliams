@@ -85,7 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
-
+- [A weekend without internet access](https://owain.codes/blog/2026/may/a-weekend-without-internet-access/) — May 04, 2026
+- [The Silent Developer](https://owain.codes/blog/2026/april/the-silent-developer/) — Apr 29, 2026
+- [OC.PowerSort 1.2.0](https://owain.codes/blog/2026/april/ocpowersort-120/) — Apr 17, 2026
+- [Optimizing Umbraco Member Pagination From Slow to Lightning Fast](https://owain.codes/blog/2026/march/optimizing-umbraco-member-pagination-from-slow-to-lightning-fast/) — Mar 31, 2026
+- [GitKraken CLI Beginner's Guide: A Better Git CLI for Developers](https://owain.codes/blog/2026/march/gitkraken-cli-beginners-guide/) — Mar 24, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
