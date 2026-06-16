@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [OC.Automate.Mastodon released](https://owain.codes/blog/2026/june/ocautomatemastodon-released/) — Jun 15, 2026
 - [Speed up slow deployments to Umbraco Cloud](https://owain.codes/blog/2026/june/speed-up-slow-deployments-to-umbraco-cloud/) — Jun 02, 2026
 - [Fixing the sort order in Content Pickers in Umbraco](https://owain.codes/blog/2026/june/fixing-the-sort-order-in-content-pickers-in-umbraco/) — Jun 01, 2026
 - [Codegarden 2026 - not long now!](https://owain.codes/blog/2026/may/codegarden-2026-not-long-now/) — May 27, 2026
 - [A weekend without internet access](https://owain.codes/blog/2026/may/a-weekend-without-internet-access/) — May 04, 2026
-- [The Silent Developer](https://owain.codes/blog/2026/april/the-silent-developer/) — Apr 29, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
