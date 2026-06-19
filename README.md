@@ -111,6 +111,7 @@ $ ps aux | grep owain
 | [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
 | [OC.UFMMemberLookup](https://www.nuget.org/packages/OC.UFMMemberLookup) | ![NuGet](https://img.shields.io/nuget/v/OC.UFMMemberLookup) | ![Downloads](https://img.shields.io/nuget/dt/OC.UFMMemberLookup) |
 | [OC.Automate.Mastodon](https://www.nuget.org/packages/OC.Automate.Mastodon) | ![NuGet](https://img.shields.io/nuget/v/OC.Automate.Mastodon) | ![Downloads](https://img.shields.io/nuget/dt/OC.Automate.Mastodon) |
+| [OC.Automate.Bluesky](https://www.nuget.org/packages/OC.Automate.Bluesky) | ![NuGet](https://img.shields.io/nuget/v/OC.Automate.Bluesky) | ![Downloads](https://img.shields.io/nuget/dt/OC.Automate.Bluesky) |
 <!-- NUGET-LIST:END -->
 
 ---
