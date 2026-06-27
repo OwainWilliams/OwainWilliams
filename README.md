@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [Umbraco Automate](https://owain.codes/blog/2026/june/umbraco-automate/) — Jun 26, 2026
 - [It's Coffee Time!](https://owain.codes/blog/2026/june/its-coffee-time/) — Jun 22, 2026
 - [Codegarden 2026 recap](https://owain.codes/blog/2026/june/codegarden-2026/) — Jun 18, 2026
 - [OC.Automate.Mastodon released](https://owain.codes/blog/2026/june/ocautomatemastodon-released/) — Jun 15, 2026
 - [Speed up slow deployments to Umbraco Cloud](https://owain.codes/blog/2026/june/speed-up-slow-deployments-to-umbraco-cloud/) — Jun 02, 2026
-- [Fixing the sort order in Content Pickers in Umbraco](https://owain.codes/blog/2026/june/fixing-the-sort-order-in-content-pickers-in-umbraco/) — Jun 01, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
