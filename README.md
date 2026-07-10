@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [Are you okay](https://owain.codes/blog/2026/july/are-you-okay/) — Jul 09, 2026
 - [Using Umbraco.Automate to populate content from an API](https://owain.codes/blog/2026/july/using-umbracoautomate-to-populate-content-from-an-api/) — Jul 01, 2026
 - [OC.Automate update](https://owain.codes/blog/2026/june/ocautomatelinkedin-now-available/) — Jun 28, 2026
 - [Umbraco Automate Workflows](https://owain.codes/blog/2026/june/umbraco-automate-workflows/) — Jun 26, 2026
 - [It's Coffee Time!](https://owain.codes/blog/2026/june/its-coffee-time/) — Jun 22, 2026
-- [Codegarden 2026 recap](https://owain.codes/blog/2026/june/codegarden-2026/) — Jun 18, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
