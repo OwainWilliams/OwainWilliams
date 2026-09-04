@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [Initials.Autolink](https://owain.codes/blog/2026/september/initialsautolink/) — Sep 03, 2026
 - [A reusable deploy pipeline for Umbraco Cloud](https://owain.codes/blog/2026/july/a-reusable-deploy-pipeline-for-umbraco-cloud/) — Jul 27, 2026
 - [Build a custom Umbraco Automate action](https://owain.codes/blog/2026/july/build-a-custom-umbraco-automate-action/) — Jul 17, 2026
 - [Not everything is about code](https://owain.codes/blog/2026/july/not-everything-is-about-code/) — Jul 16, 2026
 - [Are you okay](https://owain.codes/blog/2026/july/are-you-okay/) — Jul 09, 2026
-- [Using Umbraco.Automate to populate content from an API](https://owain.codes/blog/2026/july/using-umbracoautomate-to-populate-content-from-an-api/) — Jul 01, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
