@@ -113,6 +113,7 @@ $ ps aux | grep owain
 | [OC.HiddenDashboard](https://www.nuget.org/packages/OC.HiddenDashboard) | ![NuGet](https://img.shields.io/nuget/v/OC.HiddenDashboard) | ![Downloads](https://img.shields.io/nuget/dt/OC.HiddenDashboard) |
 | [ocTweetThis](https://www.nuget.org/packages/ocTweetThis) | ![NuGet](https://img.shields.io/nuget/v/ocTweetThis) | ![Downloads](https://img.shields.io/nuget/dt/ocTweetThis) |
 | [OC.UFMMemberLookup](https://www.nuget.org/packages/OC.UFMMemberLookup) | ![NuGet](https://img.shields.io/nuget/v/OC.UFMMemberLookup) | ![Downloads](https://img.shields.io/nuget/dt/OC.UFMMemberLookup) |
+| [Initials.AutoLink](https://www.nuget.org/packages/Initials.AutoLink) | ![NuGet](https://img.shields.io/nuget/v/Initials.AutoLink) | ![Downloads](https://img.shields.io/nuget/dt/Initials.AutoLink) |
 <!-- NUGET-LIST:END -->
 
 ---
