@@ -15,7 +15,7 @@ internal static class DevToActionHelpers
 
         if (settings is null)
             return (null, ActionResult.Failed(
-                new InvalidOperationException($"No {DevToConnectionType.Alias} connection is configured for this step."),
+                new InvalidOperationException($"No {DevToConnectionType.ConnectionTypeAlias} connection is configured for this step."),
                 StepRunErrorCategory.ConfigurationError));
 
         if (DevToConnectionSettingsValidator.Validate(settings) is { } error)

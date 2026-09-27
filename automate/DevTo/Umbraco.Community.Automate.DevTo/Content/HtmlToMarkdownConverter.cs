@@ -18,15 +18,14 @@ internal static partial class HtmlToMarkdownConverter
 
         // A new converter per call: ReverseMarkdown makes no thread-safety promises, and
         // construction is cheap next to the HTTP calls around it.
-        var converter = new Converter(new Config
-        {
-            GithubFlavored = true,
-            // Keep the text of tags Markdown has no equivalent for (<span>, <figure>, any
-            // leftover <umb-rte-block>) rather than dropping it or leaking raw HTML.
-            UnknownTags = Config.UnknownTagsOption.Bypass,
-            RemoveComments = true,
-            SmartHrefHandling = true,
-        });
+        var config = new Config { GithubFlavored = true };
+        // Keep the text of tags Markdown has no equivalent for (<span>, <figure>, any
+        // leftover <umb-rte-block>) rather than dropping it or leaking raw HTML.
+        config.Tags.Unknown = Config.UnknownTagsOption.Bypass;
+        config.Formatting.RemoveComments = true;
+        config.Links.SmartHref = true;
+
+        var converter = new Converter(config);
 
         return converter.Convert(html).Trim();
     }

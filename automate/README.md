@@ -15,8 +15,14 @@ package across is a copy.
 
 ```bash
 dotnet build Umbraco.Community.Automate.DevTo.slnx
-dotnet test Umbraco.Community.Automate.DevTo.slnx
+dotnet test Umbraco.Community.Automate.DevTo.slnx                      # Umbraco 17
+dotnet test Umbraco.Community.Automate.DevTo.slnx -p:UmbracoMajor=18   # Umbraco 18
 ```
+
+The package supports Umbraco 17 and 18 from one build (see `DevTo/UmbracoVersions.props`).
+`DevTo/test-umbraco-compat.sh` runs the full check CI runs: tests on both majors, then the
+17 build (what ships) running on 18, and a scan confirming every Umbraco API it references
+still exists in 18.
 
 ## Moving DevTo to the community repo
 
@@ -24,5 +30,7 @@ dotnet test Umbraco.Community.Automate.DevTo.slnx
 2. Add `<PackageVersion Include="ReverseMarkdown" Version="6.2.1" />` to its `Directory.Packages.props`.
 3. Add the two projects to `Umbraco.Community.Automate.slnx` under a `/DevTo/` folder, and a
    row to its README's package table.
-4. Reference the package from `Umbraco.Community.Automate.Demo` to try it end to end.
-5. Release by pushing a `devto-v1.0.0` tag.
+4. Add a step running `DevTo/test-umbraco-compat.sh` to the repo's `ci.yml` (see
+   `.github/workflows/automate-devto.yml` in this repo).
+5. Reference the package from `Umbraco.Community.Automate.Demo` to try it end to end.
+6. Release by pushing a `devto-v1.0.0` tag.

@@ -21,7 +21,7 @@ namespace Umbraco.Community.Automate.DevTo.Actions;
 /// Produces "created", "updated" or "notFound" outcomes.
 /// </summary>
 [Action("devto.publishContent", "Publish Content to DEV",
-    ConnectionTypeAlias = DevToConnectionType.Alias,
+    ConnectionTypeAlias = DevToConnectionType.ConnectionTypeAlias,
     Description = "Cross-posts a content item to DEV, converting Markdown, Rich Text, Block List and Block Grid content to Markdown.",
     Icon = "icon-automate-devto",
     Group = "Social Networks",
@@ -120,7 +120,7 @@ public sealed class PublishContentAction : ActionBase<PublishContentSettings, De
         var title = string.IsNullOrWhiteSpace(settings.TitleProperty)
             ? null
             : _converter.ReadPlainText(content, settings.TitleProperty.Trim(), culture);
-        title ??= ResolveName(content, culture);
+        title ??= PublishedContentCompat.GetName(content, culture);
 
         if (string.IsNullOrWhiteSpace(title))
             return Invalid("The article title is empty.");
@@ -225,13 +225,8 @@ public sealed class PublishContentAction : ActionBase<PublishContentSettings, De
         if (!content.ContentType.VariesByCulture())
             return null;
 
-        return !string.IsNullOrWhiteSpace(requested) ? requested.Trim() : content.Cultures.Keys.FirstOrDefault();
+        return !string.IsNullOrWhiteSpace(requested) ? requested.Trim() : PublishedContentCompat.GetCultures(content).Keys.FirstOrDefault();
     }
-
-    // Avoids the Name(culture) extension, which reaches for IVariationContextAccessor through
-    // the static service locator.
-    private static string? ResolveName(IPublishedContent content, string? culture)
-        => culture is not null && content.Cultures.TryGetValue(culture, out var info) ? info.Name : content.Name;
 
     private static string[] SplitAliases(string? value)
         => string.IsNullOrWhiteSpace(value)

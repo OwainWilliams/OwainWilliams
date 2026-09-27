@@ -11,7 +11,7 @@ namespace Umbraco.Community.Automate.DevTo.Actions;
 /// canonical URL. Produces "created" or "updated" outcomes.
 /// </summary>
 [Action("devto.createOrUpdateArticle", "Create or Update DEV Article",
-    ConnectionTypeAlias = DevToConnectionType.Alias,
+    ConnectionTypeAlias = DevToConnectionType.ConnectionTypeAlias,
     Description = "Creates a DEV article from Markdown, or updates the existing one with the same canonical URL.",
     Icon = "icon-automate-devto",
     Group = "Social Networks")]

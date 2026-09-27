@@ -4,6 +4,8 @@ A [DEV Community](https://dev.to) (dev.to) connection and actions for [Umbraco A
 
 Cross-post your Umbraco content to DEV automatically when you publish it. Markdown, Rich Text, Block List and Block Grid content is converted to Markdown, relative links and images are made absolute, and the canonical URL points back at your site so search engines treat it as the original.
 
+Works with **Umbraco 17 and 18** (and Umbraco Automate 17 and 18).
+
 ## Installation
 
 ```bash
@@ -156,3 +158,7 @@ The *Create or Update DEV Article* action takes a title, Markdown body, canonica
 ## Errors and retries
 
 API failures are classified so Automate can decide what to do: rate limiting (429), timeouts and DEV being unavailable (5xx) are transient and retried according to the step's error behaviour; an invalid API key, a rejected article (422) or missing settings fail straight away with the DEV error message.
+
+## Compatibility
+
+One build of the package supports Umbraco 17 and 18. It's compiled against 17 and every change is tested on both, including running the 17 build on 18 and checking every Umbraco API it calls still exists there. Umbraco 19 isn't supported until it has been tested.

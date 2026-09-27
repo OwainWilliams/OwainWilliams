@@ -110,7 +110,7 @@ public sealed partial class ContentMarkdownConverter
 
         var text = value switch
         {
-            IHtmlEncodedString html => StripHtml(html.ToHtmlString()),
+            IHtmlEncodedString html => StripHtml(html.ToHtmlString() ?? string.Empty),
             string s => s,
             _ => null,
         };
@@ -130,8 +130,8 @@ public sealed partial class ContentMarkdownConverter
         {
             string s => Articles.DevToTags.Split(s),
             IEnumerable<string> tags => tags,
-            IPublishedContent picked => [picked.Name],
-            IEnumerable<IPublishedContent> picked => picked.Select(p => p.Name),
+            IPublishedContent picked => [PublishedContentCompat.GetName(picked) ?? string.Empty],
+            IEnumerable<IPublishedContent> picked => picked.Select(p => PublishedContentCompat.GetName(p) ?? string.Empty),
             _ => [],
         };
     }
@@ -155,7 +155,7 @@ public sealed partial class ContentMarkdownConverter
 
     internal string? GetMediaUrl(IPublishedContent media, DevToConversionContext context)
     {
-        if (media.ItemType != PublishedItemType.Media)
+        if (media.ContentType.ItemType != PublishedItemType.Media)
             return null;
 
         var url = _urlProvider.GetMediaUrl(media, UrlMode.Default, context.Culture);
@@ -243,7 +243,7 @@ public sealed partial class ContentMarkdownConverter
 
         var alt = AltTextAliases
             .Select(alias => media.GetProperty(alias)?.GetValue(context.Culture) as string)
-            .FirstOrDefault(a => !string.IsNullOrWhiteSpace(a)) ?? media.Name;
+            .FirstOrDefault(a => !string.IsNullOrWhiteSpace(a)) ?? PublishedContentCompat.GetName(media);
 
         return $"![{EscapeLinkText(alt)}]({url})";
     }

@@ -5,13 +5,13 @@ using Umbraco.Community.Automate.DevTo.Settings;
 
 namespace Umbraco.Community.Automate.DevTo.ConnectionTypes;
 
-[ConnectionType(Alias, "DEV Community",
+[ConnectionType(ConnectionTypeAlias, "DEV Community",
     Description = "Publish articles to DEV (dev.to) or another Forem community.",
     Group = "Social Networks",
     Icon = "icon-automate-devto")]
 public sealed class DevToConnectionType : ConnectionTypeBase<DevToConnectionSettings>
 {
-    public const string Alias = "devto";
+    public const string ConnectionTypeAlias = "devto";
 
     private readonly DevToClient _client;
 
