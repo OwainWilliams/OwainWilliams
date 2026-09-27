@@ -1,0 +1,22 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Owain Williams, Umbraco Community</Authors>
+    <PackageProjectUrl>https://github.com/umbraco-community/Umbraco.Community.Automate/tree/main/DevTo/Umbraco.Community.Automate.DevTo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/umbraco-community/Umbraco.Community.Automate</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Tags this repo uses for DEV releases, e.g. devto-v1.0.0. See the Mastodon
+         package's Directory.Build.props for why height is ignored in this monorepo. -->
+    <MinVerTagPrefix>devto-v</MinVerTagPrefix>
+    <MinVerIgnoreHeight>true</MinVerIgnoreHeight>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+</Project>
