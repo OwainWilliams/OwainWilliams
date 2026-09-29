@@ -85,11 +85,11 @@ $ ps aux | grep owain
 ## `> latest_commits  # blog posts`
 
 <!-- BLOG-POST-LIST:START -->
+- [AI as a learning tool](https://owain.codes/blog/2026/september/ai-as-a-learning-tool/) — Sep 28, 2026
 - [The coffee log, rebuilt in .NET](https://owain.codes/blog/2026/september/the-coffee-log-rebuilt-in-net/) — Sep 27, 2026
 - [Time to reset](https://owain.codes/blog/2026/september/time-to-reset/) — Sep 25, 2026
 - [Initials.Autolink](https://owain.codes/blog/2026/september/initialsautolink/) — Sep 03, 2026
 - [A reusable deploy pipeline for Umbraco Cloud](https://owain.codes/blog/2026/july/a-reusable-deploy-pipeline-for-umbraco-cloud/) — Jul 27, 2026
-- [Build a custom Umbraco Automate action](https://owain.codes/blog/2026/july/build-a-custom-umbraco-automate-action/) — Jul 17, 2026
 <!-- BLOG-POST-LIST:END -->
 
 ▶ More at **[owain.codes/blog](https://owain.codes)**
