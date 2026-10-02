@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" width="210" height="44" role="img" aria-label="BLOG">
+<style>
+text{font-family:'Courier New', Courier, monospace;fill:#33ff66;}
+.flick{animation:flick 6s infinite steps(1);}
+@keyframes flick{0%,100%{opacity:1}41%{opacity:.96}42%{opacity:.88}43%{opacity:1}77%{opacity:.95}78%{opacity:1}}
+.roll{animation:roll .6s linear infinite;}
+@keyframes roll{from{transform:translateY(0)}to{transform:translateY(4px)}}
+.sweep{animation:sweep 7s linear infinite;}
+@keyframes sweep{from{transform:translateY(-60px)}to{transform:translateY(420px)}}
+.cur{animation:blink 1s steps(1) infinite;}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none !important} .typed{width:100% !important}}
+</style>
+<defs>
+<filter id="glow" x="-5%" y="-30%" width="110%" height="160%">
+  <feGaussianBlur stdDeviation="1.6" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+  <feGaussianBlur stdDeviation="2.4" result="b"/>
+  <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+<pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity="0.28"/></pattern>
+<radialGradient id="vig" cx="50%" cy="50%" r="75%"><stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.75"/></radialGradient>
+<radialGradient id="phos" cx="50%" cy="45%" r="70%"><stop offset="0%" stop-color="#06210f"/><stop offset="100%" stop-color="#020b05"/></radialGradient>
+<clipPath id="scr"><rect width="210" height="44" rx="6"/></clipPath></defs>
+<rect width="210" height="44" rx="6" fill="#020b05"/>
+<rect x="1" y="1" width="208" height="42" rx="6" fill="none" stroke="#1fa645" stroke-width="1.5" opacity=".7"/>
+<g class="flick"><text x="105.0" y="29" font-size="18" text-anchor="middle" filter="url(#glow)">[ BLOG ]</text><g clip-path="url(#scr)" style="pointer-events:none"><g class="roll"><rect x="0" y="-8" width="210" height="60" fill="url(#scan)"/></g><rect width="210" height="44" fill="url(#vig)"/><rect class="sweep" width="210" height="40" fill="#33ff66" opacity="0.05"/></g></g>
+</svg>
