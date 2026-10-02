@@ -79,7 +79,7 @@ def header():
     bx, by, bw, bh = 10, 10, 880, 360
     sx, sy, sw, sh = 34, 34, 832, 312
     H = 380
-    lines = ["OWAIN-OS v1.0  (C) 1991 INITIALS LABS", "MEMORY CHECK ........ 640K OK",
+    lines = ["OWAIN-OS v1.0  (C) 1981 INITIALS LABS", "MEMORY CHECK ........ 640K OK",
              "LOADING PROFILE.SYS ... DONE", "", "C:\\> LOGIN OWAINCODES", "C:\\> TYPE WHOAMI.TXT",
              "   NAME ...... OWAIN WILLIAMS", "   ROLE ...... SENIOR .NET DEVELOPER",
              "   FOCUS ..... UMBRACO / .NET / OSS", "   LOCATION .. SCOTLAND",
