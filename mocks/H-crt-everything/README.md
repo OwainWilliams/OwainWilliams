@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://owainwilliams.github.io/OwainWilliams/demo/"><img src="assets/crt-header.svg" alt="Retro green-screen terminal: Owain Williams, Senior .NET Developer, Umbraco, Scotland, open to collaborate" width="900"/></a>
+<a href="demo/index.html"><img src="assets/crt-header.svg" alt="Retro green-screen terminal: Owain Williams, Senior .NET Developer, Umbraco, Scotland, open to collaborate" width="900"/></a>
 
 </div>
 
