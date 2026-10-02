@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OWAIN-OS 1.0</title>
+<style>
+  :root{--fg:#33ff66;--dim:#1fa645;--bg:#020b05;--glow:rgba(51,255,102,.55)}
+  body.amber{--fg:#ffb000;--dim:#a87000;--bg:#0c0700;--glow:rgba(255,176,0,.55)}
+  body.white{--fg:#e8f0ff;--dim:#8a93a8;--bg:#05070a;--glow:rgba(200,220,255,.5)}
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:#111;overflow:hidden}
+  .monitor{position:fixed;inset:0;display:grid;place-items:center;background:radial-gradient(#2a2924,#0b0b09)}
+  .bezel{width:min(96vw,1100px);height:min(94vh,780px);padding:26px;border-radius:44px;
+    background:linear-gradient(#d3cdb9,#9d977f);box-shadow:0 30px 80px #000,inset 0 2px 3px #fff8}
+  .screen{position:relative;width:100%;height:100%;border-radius:34px/30px;overflow:hidden;background:var(--bg);
+    box-shadow:inset 0 0 90px #000,inset 0 0 12px #000;animation:poweron 1.1s ease-out both}
+  @keyframes poweron{0%{transform:scale(1,.004);filter:brightness(8)}40%{transform:scale(1,.004)}70%{transform:scale(1,1.04);filter:brightness(3)}100%{transform:none;filter:none}}
+  #term{position:absolute;inset:0;padding:26px 30px;overflow-y:auto;color:var(--fg);font:18px/1.35 "Courier New",Courier,monospace;
+    text-shadow:0 0 6px var(--glow),-1px 0 rgba(255,0,60,.35),1px 0 rgba(0,160,255,.35);white-space:pre-wrap;word-break:break-word;
+    animation:flick 5s infinite steps(1);scrollbar-width:none}
+  #term::-webkit-scrollbar{display:none}
+  @keyframes flick{0%,100%{opacity:1}41%{opacity:.97}42%{opacity:.88}43%{opacity:1}77%{opacity:.95}78%{opacity:1}}
+  .dim{color:var(--dim)} .hi{color:#fff;text-shadow:0 0 10px var(--fg)}
+  a{color:var(--fg)} a:hover{background:var(--fg);color:var(--bg);text-shadow:none}
+  .caret{display:inline-block;width:.6em;height:1.05em;background:var(--fg);vertical-align:-2px;box-shadow:0 0 8px var(--glow);animation:blink 1s steps(1) infinite}
+  @keyframes blink{50%{opacity:0}}
+  .scan{position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.28) 2px 4px)}
+  .vig{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.75))}
+  .bar{position:absolute;left:0;right:0;height:90px;pointer-events:none;background:linear-gradient(transparent,rgba(255,255,255,.05),transparent);animation:bar 7s linear infinite}
+  @keyframes bar{from{top:-100px}to{top:100%}}
+  #noise{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.035;mix-blend-mode:screen}
+  #rain{position:absolute;inset:0;width:100%;height:100%;display:none;background:var(--bg)}
+  #in{position:absolute;opacity:0;pointer-events:none}
+  .brand{position:absolute;bottom:6px;left:50px;font:11px monospace;letter-spacing:4px;color:#5d5846}
+  .led{position:absolute;bottom:12px;right:60px;width:9px;height:9px;border-radius:50%;background:#33ff66;box-shadow:0 0 8px #33ff66}
+  .grid{white-space:nowrap}.grid .c{display:inline-block;width:.62em}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+  @media (max-width:640px){.bezel{padding:10px;border-radius:24px}#term{font-size:13px;padding:14px}}
+</style>
+</head>
+<body>
+<div class="monitor"><div class="bezel"><div class="screen" id="screen">
+  <div id="term" aria-live="polite"></div>
+  <canvas id="rain"></canvas>
+  <div class="scan"></div><div class="bar"></div><canvas id="noise"></canvas><div class="vig"></div>
+</div></div>
+<div class="brand">OWAINTRON 9000</div><div class="led"></div></div>
+<input id="in" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="terminal input">
+<script>
+"use strict";
+const $ = s => document.querySelector(s);
+const term = $("#term"), inp = $("#in");
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const esc = s => s.replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+/* ---------------- data (data.json is written by scripts/crt_render.py; embedded fallback below) ---------------- */
+const POSTS = [
+  ["AI as a learning tool","https://owain.codes/blog/2026/september/ai-as-a-learning-tool/","26/09/28"],
+  ["The coffee log, rebuilt in .NET","https://owain.codes/blog/2026/september/the-coffee-log-rebuilt-in-net/","26/09/27"],
+  ["Time to reset","https://owain.codes/blog/2026/september/time-to-reset/","26/09/25"],
+  ["Initials.Autolink","https://owain.codes/blog/2026/september/initialsautolink/","26/09/03"],
+  ["A reusable deploy pipeline for Umbraco Cloud","https://owain.codes/blog/2026/july/a-reusable-deploy-pipeline-for-umbraco-cloud/","26/07/27"]];
+const PKGS = ["Umbraco.Community.MediaColourFinder","oc.MultipleDatePicker","OC.PowerSort","OC.MediaColourFinderV2","OC.UFMFallbacks",
+  "OC.Automate.Mastodon","OC.Automate.LinkedIn","OC.MultiHotspot","OC.Automate.Bluesky","OC.HiddenDashboard","ocTweetThis","OC.UFMMemberLookup","Initials.AutoLink"];
+let CONTRIB = null;
+function fallbackContrib(){            // deterministic sample so the demo works offline / from file://
+  let s = 1991; const rnd = () => (s = (s*16807) % 2147483647) / 2147483647;
+  const days = [], today = new Date(); let burst = 0;
+  const start = new Date(today); start.setDate(today.getDate() - today.getDay() - 52*7);
+  for (let d = new Date(start); d <= today; d.setDate(d.getDate()+1)) {
+    const wk = d.getDay()%6===0; if (rnd()<.04) burst = 3+Math.floor(rnd()*6);
+    let n = rnd() < (wk?.15:.62)+(burst?.3:0) ? 1+Math.floor(-Math.log(1-rnd())*4.5) : 0;
+    if (burst){burst--; n += 2+Math.floor(rnd()*8)}
+    days.push([d.toISOString().slice(0,10), n]);
+  }
+  return {days, totals:{commits:days.reduce((a,b)=>a+b[1],0),prs:87,issues:12,repos:9}, sample:true};
+}
+fetch("data.json").then(r => r.ok ? r.json() : Promise.reject()).then(j => CONTRIB = j).catch(() => CONTRIB = fallbackContrib());
+
+/* ---------------- terminal plumbing ---------------- */
+let busy = false, buf = "", hist = [], hpos = 0, caretEl;
+function out(html = "", cls = "") { const d = document.createElement("div"); if (cls) d.className = cls; d.innerHTML = html; term.insertBefore(d, promptEl()); scroll(); return d; }
+function scroll(){ term.scrollTop = term.scrollHeight; }
+let _p; function promptEl(){ return _p || (_p = Object.assign(document.createElement("div"), {id:"prompt"})); }
+function drawPrompt(){ promptEl().innerHTML = `<span class="dim">C:\\OWAIN&gt;</span> ${esc(buf)}<span class="caret"></span>`; scroll(); }
+async function type(text, speed = 14, cls = "") {
+  const d = out("", cls);
+  for (const ch of text) { d.textContent += ch; if (speed) await sleep(speed); scroll(); }
+  return d;
+}
+term.appendChild(promptEl());
+
+/* ---------------- commands ---------------- */
+const CMDS = {
+  help: () => out(`<span class="hi">AVAILABLE COMMANDS</span>
+  whoami     who is this person
+  blog       latest transmissions
+  packages   open source NuGet packages
+  contrib    commit history (CRT heatmap)
+  music      what's on the speakers
+  coffee     brew something
+  climb      go bouldering
+  matrix     wake up, Owain
+  theme      cycle green / amber / white
+  clear      wipe the screen
+  <span class="dim">...and a few you'll have to find yourself.</span>`),
+  whoami: async () => { for (const l of [
+      "NAME ...... OWAIN WILLIAMS","ROLE ...... SENIOR .NET DEVELOPER @ INITIALS LABS","FOCUS ..... UMBRACO / .NET / OSS",
+      "LOCATION .. SCOTLAND","BADGES .... UMBRACO MVP, GITKRAKEN AMBASSADOR","STATUS .... OPEN TO COLLABORATE"]) await type(l, 8); },
+  blog: () => POSTS.forEach(([t,u,d],i) => out(`<span class="dim">${String(i+1).padStart(2,"0")}</span> <a href="${u}" target="_blank" rel="noopener">${esc(t.toUpperCase())}</a> <span class="dim">${d}</span>`)),
+  packages: () => PKGS.forEach(n => out(`<a href="https://www.nuget.org/packages/${n}" target="_blank" rel="noopener">${esc(n)}</a>`)),
+  contrib: async () => {
+    if (!CONTRIB) await sleep(300);
+    const {days, totals, sample} = CONTRIB, nz = days.map(d=>d[1]).filter(Boolean).sort((a,b)=>a-b);
+    const q = f => nz[Math.floor(nz.length*f)] || 1, c = [q(.25), q(.5), q(.75)];
+    const lvl = n => !n?0 : n<=c[0]?1 : n<=c[1]?2 : n<=c[2]?3 : 4, ch = " ░▒▓█";
+    const pad = new Date(days[0][0]+"T00:00").getDay(), rows = Array.from({length:7}, () => []);
+    days.forEach((d,i) => rows[(i+pad)%7].push(lvl(d[1])));
+    const names = ["   ","MON","   ","WED","   ","FRI","   "];
+    out(`<span class="hi">COMMIT_HISTORY.LOG</span> <span class="dim">${sample ? "(sample data)" : ""}</span>`);
+    for (let r = 0; r < 7; r++) { const el = out(`<span class="dim">${names[r]}</span> `, "grid"); for (const l of rows[r]) { el.innerHTML += `<span class="c" style="opacity:${[.25,.5,.7,.85,1][l]}">${ch[l]}</span>`; } await sleep(60); }
+    const t = days.reduce((a,b)=>a+b[1],0);
+    out(`<span class="dim">TOTAL ${t.toLocaleString()}  COMMITS ${totals.commits.toLocaleString()}  PRS ${totals.prs}  ISSUES ${totals.issues}</span>`);
+  },
+  music: () => out(`NOW PLAYING  ▁▃▅▇▅▃▁▃▅▇▅▃  <span class="dim">(ask me again after the gig)</span>`),
+  coffee: async () => {
+    const cup = ["    ( (","     ) )","  ........","  |      |]","  \\      /","   `----'"];
+    out("BREWING…"); const d = out("", ""); for (const l of cup) { d.textContent += l + "\n"; await sleep(160); }
+    out("<span class=\"hi\">COFFEE_DEPENDENCY.SYS: SATISFIED</span>");
+  },
+  climb: async () => {
+    out("V0 ▲ "); for (const g of ["V1","V2","V3","V4","V5"]) { await sleep(350); out(`${g} ▲▲ <span class="dim">send</span>`); }
+    await sleep(500); out("V6 ✗ <span class=\"dim\">fell off. chalk up, go again.</span>");
+  },
+  theme: () => { const o = ["", "amber", "white"], i = o.indexOf(document.body.className); document.body.className = o[(i+1)%3]; out("PHOSPHOR CHANGED"); },
+  clear: () => { [...term.children].forEach(n => n !== _p && n.remove()); },
+  sudo: () => out("OWAIN IS NOT IN THE SUDOERS FILE. THIS INCIDENT WILL BE REPORTED.<br><span class=\"dim\">(to the coffee machine)</span>"),
+  ls: () => out("BLOG.TXT  PACKAGES.DIR  COMMIT_HISTORY.LOG  README.MD  <span class=\"dim\">SECRET.EXE</span>"),
+  "secret.exe": () => CMDS.matrix(),
+  exit: () => out("THERE IS NO ESCAPE. TRY <span class=\"hi\">matrix</span>."),
+  matrix: () => rain(),
+};
+const ALIAS = {"cat blog.txt":"blog","dir":"ls","cat commit_history.log":"contrib","?":"help","cls":"clear"};
+
+async function run(line) {
+  const cmd = line.trim().toLowerCase(); if (!cmd) return;
+  out(`<span class="dim">C:\\OWAIN&gt;</span> ${esc(line)}`);
+  const f = CMDS[ALIAS[cmd] || cmd];
+  if (f) await f(); else out(`BAD COMMAND OR FILE NAME: <span class="hi">${esc(cmd.toUpperCase())}</span>  <span class="dim">(try help)</span>`);
+}
+
+/* ---------------- input ---------------- */
+addEventListener("keydown", async e => {
+  if (rainOn) { stopRain(); return; }
+  if (busy) return; inp.focus();
+  if (e.key === "Enter") { const l = buf; buf = ""; hist.push(l); hpos = hist.length; busy = true; drawPrompt(); promptEl().style.visibility = "hidden";
+    try { await run(l); } finally { busy = false; promptEl().style.visibility = ""; drawPrompt(); } }
+  else if (e.key === "Backspace") { buf = buf.slice(0,-1); drawPrompt(); }
+  else if (e.key === "ArrowUp") { if (hpos > 0) buf = hist[--hpos]; drawPrompt(); e.preventDefault(); }
+  else if (e.key === "ArrowDown") { buf = hpos < hist.length-1 ? hist[++hpos] : (hpos = hist.length, ""); drawPrompt(); e.preventDefault(); }
+  else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey) { buf += e.key; drawPrompt(); e.preventDefault(); }
+});
+addEventListener("click", () => inp.focus());
+inp.addEventListener("input", () => { if (!busy && inp.value) { buf += inp.value; inp.value = ""; drawPrompt(); } }); // mobile keyboards
+
+/* ---------------- effects: noise + matrix rain ---------------- */
+const noise = $("#noise"), nctx = noise.getContext("2d"); noise.width = noise.height = 128;
+(function n(){ const im = nctx.createImageData(128,128); for (let i=0;i<im.data.length;i+=4){ const v = Math.random()*255; im.data[i]=im.data[i+1]=im.data[i+2]=v; im.data[i+3]=255; } nctx.putImageData(im,0,0); setTimeout(()=>requestAnimationFrame(n),60); })();
+let rainOn = false, rainTimer;
+function rain(){
+  const c = $("#rain"), x = c.getContext("2d"); c.style.display = "block"; c.width = c.offsetWidth; c.height = c.offsetHeight; rainOn = true;
+  const fs = 16, cols = Math.floor(c.width/fs), drops = Array(cols).fill(0).map(()=>Math.random()*-12), glyphs = "ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ0123456789OWAIN{}<>/";
+  const fg = getComputedStyle(document.body).getPropertyValue("--fg");
+  rainTimer = setInterval(() => {
+    x.fillStyle = "rgba(2,11,5,.08)"; x.fillRect(0,0,c.width,c.height); x.fillStyle = fg; x.font = fs+"px monospace";
+    drops.forEach((y,i) => { x.fillText(glyphs[Math.floor(Math.random()*glyphs.length)], i*fs, y*fs); drops[i] = y*fs > c.height && Math.random() > .975 ? 0 : y+1; });
+  }, 50);
+  out("<span class=\"dim\">(press any key to wake up)</span>");
+}
+function stopRain(){ rainOn = false; clearInterval(rainTimer); $("#rain").style.display = "none"; }
+
+/* ---------------- boot ---------------- */
+(async () => {
+  busy = true; promptEl().style.visibility = "hidden";
+  await sleep(900);
+  for (const [t, d] of [["OWAIN-OS v1.0  (C) 1991 INITIALS LABS", 200], ["MEMORY CHECK ........ ", 60]]) await type(t, 12);
+  for (let k = 0; k <= 640; k += 64) { term.lastElementChild.previousElementSibling.textContent = `MEMORY CHECK ........ ${k}K`; await sleep(60); }
+  await type("LOADING PROFILE.SYS ... DONE", 12);
+  await type("", 0);
+  await type("Type  help  for commands. Try  contrib.", 10, "dim");
+  busy = false; promptEl().style.visibility = ""; drawPrompt(); inp.focus();
+})();
+</script>
+</body>
+</html>
