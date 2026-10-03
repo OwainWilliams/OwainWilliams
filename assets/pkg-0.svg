@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 30" width="900" height="30" role="img" aria-label="Umbraco.Community.MediaColourFinder 2.2.6, 3464 downloads">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 30" width="900" height="30" role="img" aria-label="Umbraco.Community.MediaColourFinder 1.0.2, 28246 downloads">
 <style>
 text{font-family:'Courier New', Courier, monospace;fill:#33ff66;}
 .flick{animation:flick 6s infinite steps(1);}
@@ -26,5 +26,5 @@ text{font-family:'Courier New', Courier, monospace;fill:#33ff66;}
 <clipPath id="scr"><rect width="900" height="30" rx="6"/></clipPath></defs>
 <rect width="900" height="30" rx="6" fill="#020b05"/>
 <rect x="1" y="1" width="898" height="28" rx="6" fill="none" stroke="#1fa645" stroke-width="1.5" opacity=".7"/>
-<g class="flick"><text x="16" y="23" font-size="16" filter="url(#glow)" xml:space="preserve">Umbraco.Community.MediaColourFinder ...........</text><text x="884" y="23" font-size="14" text-anchor="end" style="fill:#1fa645" xml:space="preserve">v2.2.6   ↓ 3.5K</text><g clip-path="url(#scr)" style="pointer-events:none"><g class="roll"><rect x="0" y="-8" width="900" height="46" fill="url(#scan)"/></g><rect width="900" height="30" fill="url(#vig)"/><rect class="sweep" width="900" height="40" fill="#33ff66" opacity="0.05"/></g></g>
+<g class="flick"><text x="16" y="23" font-size="16" filter="url(#glow)" xml:space="preserve">Umbraco.Community.MediaColourFinder ...........</text><text x="884" y="23" font-size="14" text-anchor="end" style="fill:#1fa645" xml:space="preserve">v1.0.2   ↓ 28.2K</text><g clip-path="url(#scr)" style="pointer-events:none"><g class="roll"><rect x="0" y="-8" width="900" height="46" fill="url(#scan)"/></g><rect width="900" height="30" fill="url(#vig)"/><rect class="sweep" width="900" height="40" fill="#33ff66" opacity="0.05"/></g></g>
 </svg>
