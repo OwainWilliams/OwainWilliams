@@ -25,8 +25,8 @@
 <a href="https://www.nuget.org/packages/OC.MediaColourFinderV2"><img src="assets/pkg-3.svg" alt="OC.MediaColourFinderV2" width="900"/></a>
 <a href="https://www.nuget.org/packages/OC.UFMFallbacks"><img src="assets/pkg-4.svg" alt="OC.UFMFallbacks" width="900"/></a>
 <a href="https://www.nuget.org/packages/OC.Automate.Mastodon"><img src="assets/pkg-5.svg" alt="OC.Automate.Mastodon" width="900"/></a>
-<a href="https://www.nuget.org/packages/OC.Automate.LinkedIn"><img src="assets/pkg-6.svg" alt="OC.Automate.LinkedIn" width="900"/></a>
-<a href="https://www.nuget.org/packages/OC.MultiHotspot"><img src="assets/pkg-7.svg" alt="OC.MultiHotspot" width="900"/></a>
+<a href="https://www.nuget.org/packages/OC.MultiHotspot"><img src="assets/pkg-6.svg" alt="OC.MultiHotspot" width="900"/></a>
+<a href="https://www.nuget.org/packages/OC.Automate.LinkedIn"><img src="assets/pkg-7.svg" alt="OC.Automate.LinkedIn" width="900"/></a>
 <a href="https://www.nuget.org/packages/OC.Automate.Bluesky"><img src="assets/pkg-8.svg" alt="OC.Automate.Bluesky" width="900"/></a>
 <a href="https://www.nuget.org/packages/OC.HiddenDashboard"><img src="assets/pkg-9.svg" alt="OC.HiddenDashboard" width="900"/></a>
 <a href="https://www.nuget.org/packages/ocTweetThis"><img src="assets/pkg-10.svg" alt="ocTweetThis" width="900"/></a>
